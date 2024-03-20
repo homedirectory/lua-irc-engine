@@ -275,9 +275,9 @@ function Base:process(message)
 	if prefix then
 		local nick, username, host = prefix:match("^(.+)!(.+)@(.+)$")
 		if nick and username and host then
-			sender = {type = "user", nick, username, host}
+			sender = {type = "user", nick = nick, username = username, host = host}
 		else
-			sender = {type = "server", prefix}
+			sender = {type = "server", prefix = prefix}
 		end
 	else
 		sender = {type = "none"}

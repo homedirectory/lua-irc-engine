@@ -162,6 +162,10 @@ function util.table.nelem(t)
 	return count
 end
 
+function util.table.pack(...)
+  return {...}
+end
+
 ---
 
 util.io = {}
